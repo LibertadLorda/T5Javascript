@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 5 - JavaScript</title>
+</head>
+<body>
+
+    <div class="variables">
+        <p id="cadena de texto"></p>
+        <p id="numeros"></p>    
+        <p id="booleanTrue"></p>
+        <p id="booleanFalse"></p>
+        <p id="tipo de variable"></p>
+        <p id="hola"></p>
+    </div>
+
+    <div class="operaciones">
+        <p id="sumar"></p>
+        <p id="restar"></p>
+        <p id="multip"></p>
+        <p id="divi"></p>
+    </div>
+
+
+    <div class="funciones">
+        <p id="saludar"></p>
+        <p id="funcionsuma"></p>
+        <p id="funcionparimpar"></p>
+    </div>
+
+    <div class="objetos">
+        <p id="marcacoche"></p>
+        <p id="numerodepuertas"></p>
+        <p id="atributoanidado"></p>
+    </div>
+
+    <div class="arrays">
+        <p id="array"></p>
+        <p id="añadirelemento"></p>
+        <p id="eliminarpares"></p>
+        <p id="mayor"></p>
+        <p id="menor"></p>
+        <p id="fraseMinusculas"></p>
+        <p id="fraseMayusculas"></p>
+        <p id="primeraLetra"></p>
+    </div>
+
+    <!--MANIPULACIÓN DEL DOM-->
+
+    <!--Botón con mensaje-->
+    <button class="botonMensaje" onclick="mensaje()">Aprieta aquí</button>
+   
+    <!--Cambiar el contenido de un elemento HTML mediante JavaScript-->
+    <h1 id="titulo">Primeros pasos conJS</h1>
+    <script>
+        document.getElementById("titulo").innerHTML = "Taller 5: Primeros pasos con JavaScript";
+    </script>
+
+    <!--Ocultar y mostrar elemento HTML utilizando JavaScript.-->
+    <button id="ocultar" onclick="ocultarMensaje()"><p>Vamos a ocultar este mensaje</p></button>
+
+
+    <p id="imprimirArray"></p>
+    <p id="totalArray"></p>
+
+    <p><script src="./index.js" href="index.js"></script></p>
+</body>
+
+
+</html>
