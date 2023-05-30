@@ -200,20 +200,18 @@ function mensaje(){
     window.alert("Ten buen día!");
 }
 
+//Cambiar el contenido de un elemento HTML mediante JavaScript
+function cambio(){
+document.getElementById("titulo").innerHTML = "Taller 5: Primeros pasos con JavaScript";
+}
+
 //Ocultar y mostrar elemento HTML 
 function ocultarMensaje(){
-    let	desaparece;
-
-	desaparece = document.getElementById("ocultar");
-	console.log(desaparece);
-	if (desaparece.style.display === "none")
-	{
-		desaparece.style.display = "block";
-	}
-	else
-	{
-		desaparece.style.display = "none";
-	}
+	document.getElementById("parrafo").style.display="none";
+}
+function mostrarMensaje(){
+    document.getElementById("parrafo").style.display="block";
+	
 }
 
 //Crear un array de 10 nombres. Crear una función que imprima en pantalla una lista con los nombres del array de nombres.
@@ -221,14 +219,143 @@ const arraynombres=["Maria", "Pepe", "Berta", "Anton", "Jesus","Ana","Eli","Jose
 function imprimir(arraynombres){
     for(let i=0; i<arraynombres.length; i++){
         console.log(arraynombres[i]);
-        document.getElementById("imprimirArray").innerHTML = arraynombres;
-       }
+    }
+    document.getElementById("imprimirArray").innerHTML = arraynombres;
 }
 
-//Array de numeros
+//Array de numeros y cuantos números tiene el array
 const numarray=[1,5,34,600,36];
 function cuantos(numarray){
     
     document.getElementById("totalArray").innerHTML =`El numero total del array es ${numarray.length}`;
 	
 }
+
+//Crear formulario
+
+var formulario = document.createElement("form");
+
+var Nombre = document.createElement("label");
+Nombre.innerHTML = "Nombre:";
+formulario.appendChild(Nombre);
+
+var nombreintro = document.createElement("input");
+nombreintro.type = "text";
+nombreintro.name = "nombre";
+formulario.appendChild(nombreintro);
+
+var Apellido = document.createElement("label");
+Apellido.innerHTML = "Apellido:";
+formulario.appendChild(Apellido);
+
+var apellidointro = document.createElement("input");
+apellidointro.type = "text";
+apellidointro.name = "apellido";
+formulario.appendChild(apellidointro);
+
+var email = document.createElement("label");
+email.innerHTML = "Email:";
+formulario.appendChild(email);
+
+var emailintro = document.createElement("input");
+emailintro.type = "email";
+emailintro.name = "email";
+formulario.appendChild(emailintro);
+
+var enviar = document.createElement("button");
+enviar.type = "submit";
+enviar.innerHTML = "Enviar";
+formulario.appendChild(enviar);
+
+document.body.appendChild(formulario);
+
+
+//Creación de una tabla
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+let fila1 = document.createElement('tr');
+let titulo1= document.createElement('th');
+titulo1.innerHTML = "Id";
+let titulo2= document.createElement('th');
+titulo2.innerHTML = "Nombre";
+let titulo3= document.createElement('th');
+titulo3.innerHTML = "Apellidos";
+let titulo4= document.createElement('th');
+titulo4.innerHTML = "Species";
+let titulo5= document.createElement('th');
+titulo5.innerHTML = "Type";
+let titulo6= document.createElement('th');
+titulo6.innerHTML = "Gender";
+
+fila1.appendChild(titulo1);
+fila1.appendChild(titulo2);
+fila1.appendChild(titulo3);
+fila1.appendChild(titulo4);
+fila1.appendChild(titulo5);
+fila1.appendChild(titulo6);
+thead.appendChild(fila1);
+
+let fila2 = document.createElement('tr');
+let fila2Datos1 = document.createElement('td');
+fila2Datos1.innerHTML = "1";
+let fila2Datos2 = document.createElement('td');
+fila2Datos2.innerHTML = "Libertad";
+let fila2Datos3 = document.createElement('td');
+fila2Datos3.innerHTML = "S";
+let fila2Datos4 = document.createElement('td');
+fila2Datos4.innerHTML = "M";
+let fila2Datos5 = document.createElement('td');
+fila2Datos5.innerHTML = "123";
+let fila2Datos6 = document.createElement('td');
+fila2Datos6.innerHTML = "F";
+
+fila2.appendChild(fila2Datos1);
+fila2.appendChild(fila2Datos2);
+fila2.appendChild(fila2Datos3);
+fila2.appendChild(fila2Datos4);
+fila2.appendChild(fila2Datos5);
+fila2.appendChild(fila2Datos6);
+tbody.appendChild(fila2);
+
+
+document.body.appendChild(table);
+
+//Crea array de objetos 10 objetos con su respectivos key:value. 
+const arrayDatos = [
+    
+    { id: 2, name: "Pepe", status: "Medio", species: "kaju", type: 2, gender: "F"},
+    { id: 3, name: "Mariam", status: "Alto", species: "koki", type: 3, gender: "M"},
+    { id: 4, name: "Paco", status: "Bajo", species: "pilu", type: 4, gender: "F"},
+    { id: 5, name: "Lia", status: "Medio", species: "kaju", type: 2, gender: "M"},
+    { id: 6, name: "Mario", status: "Alto", species: "mirria", type: 2, gender: "F"},
+    { id: 7, name: "Maho", status: "Medio", species: "bila", type: 3, gender: "F"},
+    { id: 8, name: "Jennifer", status: "Medio", species: "kaju", type: 4, gender: "F"},
+    { id: 9, name: "Vairon", status: "Alto", species: "tori", type: 3, gender: "M"},
+    { id: 10, name: "Guia", status: "Medio", species: "mirria", type: 2, gender: "F"},
+]
+console.log(arrayDatos);
+
+//Imprimir el array de objetos en la tabla ya hecha
+for(var i = 0; i < arrayDatos.length; i++) {
+    var row = table.insertRow(i+1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+
+    cell1.innerHTML = arrayDatos[i].id;
+    cell2.innerHTML = arrayDatos[i].name;
+    cell3.innerHTML = arrayDatos[i].status;
+    cell4.innerHTML = arrayDatos[i].species;
+    cell5.innerHTML = arrayDatos[i].type;
+    cell6.innerHTML = arrayDatos[i].gender;
+}
+
+
