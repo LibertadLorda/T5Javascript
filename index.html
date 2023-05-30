@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Taller 5 - JavaScript</title>
 </head>
 <body>
@@ -54,20 +55,19 @@
     <button class="botonMensaje" onclick="mensaje()">Aprieta aquí</button>
    
     <!--Cambiar el contenido de un elemento HTML mediante JavaScript-->
-    <h1 id="titulo">Primeros pasos conJS</h1>
-    <script>
-        document.getElementById("titulo").innerHTML = "Taller 5: Primeros pasos con JavaScript";
-    </script>
+    <h1 id="titulo" onclick="cambio()">Primeros pasos con JS, haz clic!</h1>
+    
 
     <!--Ocultar y mostrar elemento HTML utilizando JavaScript.-->
-    <button id="ocultar" onclick="ocultarMensaje()"><p>Vamos a ocultar este mensaje</p></button>
+    <p id="parrafo">Mensaje</p>
+    <button onclick="ocultarMensaje()">Ocultar</button>
+    <button onclick="mostrarMensaje()">Mostrar</button>
 
-
+    <!--Crear un array de números.Crear una función que pinte en pantalla cuántos números tiene el array de números.-->
     <p id="imprimirArray"></p>
     <p id="totalArray"></p>
 
-    <p><script src="./index.js" href="index.js"></script></p>
+
+    <script src="./index.js" href="index.js"></script>
 </body>
-
-
 </html>
